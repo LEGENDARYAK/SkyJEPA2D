@@ -9,7 +9,7 @@ training implementation. It is an educational research starting point, not an
 official reproduction, calibrated RAM Engineering drone model, or demonstration
 of real-world transfer. It has no camera input or obstacle avoidance.
 
-## Start on your Mac
+## Start Mac
 
 Use Python 3.10 or newer; Python 3.11 or 3.12 is a good starting choice. Unzip the
 project, open Terminal in its directory, and run:

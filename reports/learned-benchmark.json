@@ -1,0 +1,156 @@
+{
+  "mode": "learned",
+  "seed": 91,
+  "config": {
+    "drone": {
+      "mass": 1.0,
+      "inertia": 0.025,
+      "arm": 0.22,
+      "max_motor_force": 9.0,
+      "motor_tau": 0.045,
+      "linear_drag": 0.12,
+      "angular_drag": 0.015,
+      "thrust_gains": [
+        1.0,
+        1.0
+      ],
+      "wind_velocity": [
+        0.0,
+        0.0
+      ]
+    },
+    "world": {
+      "gravity": 9.81,
+      "physics_dt": 0.005,
+      "control_dt": 0.05,
+      "width": 20.0,
+      "height": 12.0,
+      "collision_radius": 0.25,
+      "max_seconds": 30.0
+    }
+  },
+  "flights": [
+    {
+      "trial": 0,
+      "goal": [
+        6.963162807349699,
+        8.953807007558902
+      ],
+      "status": "time_limit",
+      "final_distance_m": 0.34528503738655764,
+      "simulation_seconds": 29.999999999998316,
+      "mean_step_ms": 148.25343854998815,
+      "p95_step_ms": 209.80617525015074
+    },
+    {
+      "trial": 1,
+      "goal": [
+        14.470408862334459,
+        4.50618629741363
+      ],
+      "status": "arrived",
+      "final_distance_m": 0.11125693187511144,
+      "simulation_seconds": 6.099999999999892,
+      "mean_step_ms": 132.95063238523446,
+      "p95_step_ms": 153.19618014968904
+    },
+    {
+      "trial": 2,
+      "goal": [
+        14.68795525539929,
+        8.913230032923638
+      ],
+      "status": "time_limit",
+      "final_distance_m": 0.5094794581578873,
+      "simulation_seconds": 29.999999999998316,
+      "mean_step_ms": 147.97593616500308,
+      "p95_step_ms": 281.82303549979196
+    },
+    {
+      "trial": 3,
+      "goal": [
+        6.979322157717716,
+        8.829867797619652
+      ],
+      "status": "arrived",
+      "final_distance_m": 0.19108410425507208,
+      "simulation_seconds": 5.7499999999999,
+      "mean_step_ms": 172.7918923304811,
+      "p95_step_ms": 279.23005499987994
+    },
+    {
+      "trial": 4,
+      "goal": [
+        8.577265587176841,
+        6.531360302848334
+      ],
+      "status": "arrived",
+      "final_distance_m": 0.22679350410247223,
+      "simulation_seconds": 8.199999999999882,
+      "mean_step_ms": 177.498498347565,
+      "p95_step_ms": 299.8710549997667
+    },
+    {
+      "trial": 5,
+      "goal": [
+        5.6809694510204745,
+        8.42056984266317
+      ],
+      "status": "arrived",
+      "final_distance_m": 0.15869586744387099,
+      "simulation_seconds": 6.149999999999891,
+      "mean_step_ms": 169.32820486995408,
+      "p95_step_ms": 269.2349752004702
+    },
+    {
+      "trial": 6,
+      "goal": [
+        15.393269501376519,
+        5.832172416746844
+      ],
+      "status": "arrived",
+      "final_distance_m": 0.16854128440914448,
+      "simulation_seconds": 5.949999999999895,
+      "mean_step_ms": 165.32291294119082,
+      "p95_step_ms": 305.3227343001707
+    },
+    {
+      "trial": 7,
+      "goal": [
+        10.676790658108267,
+        3.903838146458275
+      ],
+      "status": "arrived",
+      "final_distance_m": 0.12093952080573013,
+      "simulation_seconds": 3.349999999999951,
+      "mean_step_ms": 180.10699035826903,
+      "p95_step_ms": 308.4637535997899
+    },
+    {
+      "trial": 8,
+      "goal": [
+        14.145116239333582,
+        2.8822776045394845
+      ],
+      "status": "arrived",
+      "final_distance_m": 0.18352316039715388,
+      "simulation_seconds": 4.3499999999999295,
+      "mean_step_ms": 139.88689964372006,
+      "p95_step_ms": 151.79685230023097
+    },
+    {
+      "trial": 9,
+      "goal": [
+        16.04232321216501,
+        5.177917636555195
+      ],
+      "status": "arrived",
+      "final_distance_m": 0.09110648281572088,
+      "simulation_seconds": 7.199999999999869,
+      "mean_step_ms": 151.15272359028293,
+      "p95_step_ms": 207.29989514975384
+    }
+  ],
+  "arrival_rate": 0.8,
+  "note": "No human input; goals sampled before each episode."
+}

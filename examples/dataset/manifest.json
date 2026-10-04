@@ -1,0 +1,2931 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "config": {
+    "drone": {
+      "mass": 1.0,
+      "inertia": 0.025,
+      "arm": 0.22,
+      "max_motor_force": 9.0,
+      "motor_tau": 0.045,
+      "linear_drag": 0.12,
+      "angular_drag": 0.015,
+      "thrust_gains": [
+        1.0,
+        1.0
+      ],
+      "wind_velocity": [
+        0.0,
+        0.0
+      ]
+    },
+    "world": {
+      "gravity": 9.81,
+      "physics_dt": 0.005,
+      "control_dt": 0.05,
+      "width": 20.0,
+      "height": 12.0,
+      "collision_radius": 0.25,
+      "max_seconds": 30.0
+    }
+  },
+  "control_dt": 0.05,
+  "state_names": [
+    "x",
+    "z",
+    "vx",
+    "vz",
+    "theta",
+    "omega"
+  ],
+  "action_names": [
+    "left_force_command",
+    "right_force_command"
+  ],
+  "action_units": "N",
+  "randomized": true,
+  "collector": "baseline_pd_with_correlated_force_excitation",
+  "episodes": [
+    {
+      "file": "episode_00000.npz",
+      "split": "validation",
+      "seed": 1728507682,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9033269675013478,
+          "inertia": 0.025860407598014064,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07958483419018034,
+          "linear_drag": 0.18092529627524834,
+          "angular_drag": 0.013899211204555052,
+          "thrust_gains": [
+            1.0375195383057252,
+            1.0165446402236022
+          ],
+          "wind_velocity": [
+            0.2116617016020118,
+            0.5385057754637245
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00001.npz",
+      "split": "train",
+      "seed": 15810353,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.98294915418482,
+          "inertia": 0.026668878241334144,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07432641374417429,
+          "linear_drag": 0.20509953325908925,
+          "angular_drag": 0.0096663326699712,
+          "thrust_gains": [
+            1.0155168302432451,
+            1.0199869526321645
+          ],
+          "wind_velocity": [
+            0.48913427630072015,
+            -0.08479746125556442
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00002.npz",
+      "split": "train",
+      "seed": 1711206423,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0826296294906128,
+          "inertia": 0.025085111061139795,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.051107150142226374,
+          "linear_drag": 0.10012254442143341,
+          "angular_drag": 0.015051605007234218,
+          "thrust_gains": [
+            1.0171742092998788,
+            1.0067400753430804
+          ],
+          "wind_velocity": [
+            0.052041394535018104,
+            0.3748471829706371
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00003.npz",
+      "split": "train",
+      "seed": 1689907231,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.904707015257031,
+          "inertia": 0.0295978637938789,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06404313861902794,
+          "linear_drag": 0.17650338959571793,
+          "angular_drag": 0.00970758404635999,
+          "thrust_gains": [
+            1.0474877847013917,
+            0.9687265649936063
+          ],
+          "wind_velocity": [
+            -0.5133543877792496,
+            0.021754354286596
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00004.npz",
+      "split": "test",
+      "seed": 1675819612,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9999293001231976,
+          "inertia": 0.024350843029609333,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.04433669744096533,
+          "linear_drag": 0.18543278052373363,
+          "angular_drag": 0.023688256445369035,
+          "thrust_gains": [
+            0.9647106336251259,
+            1.0429947788220726
+          ],
+          "wind_velocity": [
+            -0.24208384567098135,
+            0.5332977101712365
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00005.npz",
+      "split": "train",
+      "seed": 1427756341,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8658707838229521,
+          "inertia": 0.02850776207634528,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03307772255447315,
+          "linear_drag": 0.22987263647206108,
+          "angular_drag": 0.019755165609169095,
+          "thrust_gains": [
+            1.033368933343255,
+            0.9765733905198024
+          ],
+          "wind_velocity": [
+            -0.44242380756051103,
+            -0.26335491290371166
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00006.npz",
+      "split": "train",
+      "seed": 1012682731,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8682332439338224,
+          "inertia": 0.021839351762221574,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07211414024957145,
+          "linear_drag": 0.0773061745020695,
+          "angular_drag": 0.017764559471530866,
+          "thrust_gains": [
+            1.0262411818883552,
+            0.9668362067215959
+          ],
+          "wind_velocity": [
+            -0.09739373181847732,
+            -0.08316368763829418
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00007.npz",
+      "split": "train",
+      "seed": 1514331118,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8794400718494367,
+          "inertia": 0.02699396316845895,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.04981506740256013,
+          "linear_drag": 0.08855384407365452,
+          "angular_drag": 0.011656035769144747,
+          "thrust_gains": [
+            1.0087363274633725,
+            0.9887265184937785
+          ],
+          "wind_velocity": [
+            -0.18830515115456375,
+            0.16798165147007416
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00008.npz",
+      "split": "train",
+      "seed": 595114158,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1326099520078772,
+          "inertia": 0.022064563461554693,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.031439434894564605,
+          "linear_drag": 0.051556605780950095,
+          "angular_drag": 0.015198717352820454,
+          "thrust_gains": [
+            0.9546090693269801,
+            0.9929695715533369
+          ],
+          "wind_velocity": [
+            -0.29438945443892794,
+            0.5727233593638194
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00009.npz",
+      "split": "train",
+      "seed": 1676602826,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0757776859831898,
+          "inertia": 0.029831421178374996,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03012355167339771,
+          "linear_drag": 0.24764412457433627,
+          "angular_drag": 0.009854070777475184,
+          "thrust_gains": [
+            1.0467613639718008,
+            1.0229892881702045
+          ],
+          "wind_velocity": [
+            -0.2178759439739711,
+            -0.1259771515957483
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00010.npz",
+      "split": "train",
+      "seed": 1193242761,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0919740414167445,
+          "inertia": 0.027108074279795304,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07764833060851539,
+          "linear_drag": 0.09801184874729296,
+          "angular_drag": 0.017871757122978574,
+          "thrust_gains": [
+            1.0112160062014588,
+            1.0280700251644166
+          ],
+          "wind_velocity": [
+            0.5313996290397084,
+            0.06863929289620829
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00011.npz",
+      "split": "train",
+      "seed": 985514123,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9682320784323538,
+          "inertia": 0.02154647039743171,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.047756927695677714,
+          "linear_drag": 0.17812101094135235,
+          "angular_drag": 0.02243814686965817,
+          "thrust_gains": [
+            0.9779244695991016,
+            1.0118545928469656
+          ],
+          "wind_velocity": [
+            -0.38628145164860284,
+            -0.25495994721120163
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00012.npz",
+      "split": "train",
+      "seed": 1085781155,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0647282548640649,
+          "inertia": 0.023797137374229352,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.027287552142725973,
+          "linear_drag": 0.11982481841616713,
+          "angular_drag": 0.02484206445887867,
+          "thrust_gains": [
+            0.9982421993373389,
+            0.9843157914850511
+          ],
+          "wind_velocity": [
+            0.1475177831787401,
+            -0.5019541411817011
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00013.npz",
+      "split": "train",
+      "seed": 1221362417,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0970989886338116,
+          "inertia": 0.022675797532185668,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03503668448947471,
+          "linear_drag": 0.11428819300086529,
+          "angular_drag": 0.02206867644659031,
+          "thrust_gains": [
+            0.9528085447311005,
+            1.0432610834864382
+          ],
+          "wind_velocity": [
+            -0.25684540663373895,
+            0.3161311953600491
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00014.npz",
+      "split": "train",
+      "seed": 80020205,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8956058844646912,
+          "inertia": 0.02272413863089931,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06948446850457804,
+          "linear_drag": 0.20464618062651074,
+          "angular_drag": 0.01698846548946678,
+          "thrust_gains": [
+            0.9854139091435723,
+            1.0189931130521035
+          ],
+          "wind_velocity": [
+            -0.10783064677098736,
+            -0.28835851062997025
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00015.npz",
+      "split": "train",
+      "seed": 300211767,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0742037973317347,
+          "inertia": 0.02275667697951098,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07988937504032251,
+          "linear_drag": 0.19588760885475548,
+          "angular_drag": 0.02371399567300233,
+          "thrust_gains": [
+            1.0377274949683937,
+            1.0013275182673775
+          ],
+          "wind_velocity": [
+            0.2110726856393852,
+            0.3784971379449156
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00016.npz",
+      "split": "train",
+      "seed": 527166790,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0721486877441886,
+          "inertia": 0.0205983881768233,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06784853371046051,
+          "linear_drag": 0.1546182161059868,
+          "angular_drag": 0.015656168228927774,
+          "thrust_gains": [
+            1.0214079485209686,
+            0.9886645899841313
+          ],
+          "wind_velocity": [
+            0.52884524997353,
+            0.11843636304653793
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00017.npz",
+      "split": "train",
+      "seed": 245951459,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9292687932955785,
+          "inertia": 0.022745086145723247,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07058174997832625,
+          "linear_drag": 0.12000031061586364,
+          "angular_drag": 0.012419343132557803,
+          "thrust_gains": [
+            1.0330280793962217,
+            1.0262106811078118
+          ],
+          "wind_velocity": [
+            0.10814864113662437,
+            0.3301678238162935
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00018.npz",
+      "split": "test",
+      "seed": 944062962,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9466541768442789,
+          "inertia": 0.027496774781972218,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.04546200986257361,
+          "linear_drag": 0.10800093853959505,
+          "angular_drag": 0.022028166002412537,
+          "thrust_gains": [
+            0.9731797895409877,
+            1.0103501755562259
+          ],
+          "wind_velocity": [
+            0.13390940123874406,
+            0.2629046194538647
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00019.npz",
+      "split": "train",
+      "seed": 1435384429,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1358970499867818,
+          "inertia": 0.022022628163308564,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.025971572502961896,
+          "linear_drag": 0.16990784307918932,
+          "angular_drag": 0.011165326216546693,
+          "thrust_gains": [
+            0.9965884462073601,
+            0.9704500996837483
+          ],
+          "wind_velocity": [
+            0.3138638625787322,
+            -0.054136364345925836
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00020.npz",
+      "split": "train",
+      "seed": 1405375274,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8599702725537597,
+          "inertia": 0.02916816223574767,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.04854492669732455,
+          "linear_drag": 0.0900364921439134,
+          "angular_drag": 0.021411898003464,
+          "thrust_gains": [
+            1.0194228048211387,
+            0.9720413157993488
+          ],
+          "wind_velocity": [
+            -0.571448966848455,
+            0.5024350284640419
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00021.npz",
+      "split": "test",
+      "seed": 1011671398,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1328036286706236,
+          "inertia": 0.02207403983374518,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03293727138844607,
+          "linear_drag": 0.13579976329420224,
+          "angular_drag": 0.009548994029129374,
+          "thrust_gains": [
+            0.9969070724756568,
+            1.037755464629706
+          ],
+          "wind_velocity": [
+            0.5955788743489204,
+            -0.13233989277774488
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00022.npz",
+      "split": "train",
+      "seed": 1836270333,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0731814544048752,
+          "inertia": 0.022476834954998363,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.046263213718556837,
+          "linear_drag": 0.09862214665438887,
+          "angular_drag": 0.016779003337537117,
+          "thrust_gains": [
+            1.008395883954411,
+            1.0497067929006587
+          ],
+          "wind_velocity": [
+            -0.3570105334761513,
+            -0.2707659808286978
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00023.npz",
+      "split": "train",
+      "seed": 1213835294,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0479238304620364,
+          "inertia": 0.022088959279201667,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.04641525605435076,
+          "linear_drag": 0.22037565649599455,
+          "angular_drag": 0.0239942750798227,
+          "thrust_gains": [
+            1.0075263011210613,
+            1.0456343226930378
+          ],
+          "wind_velocity": [
+            0.5643907812365375,
+            -0.006096520694604313
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00024.npz",
+      "split": "train",
+      "seed": 170075129,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9200659086312766,
+          "inertia": 0.0213042306131552,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06429174727780179,
+          "linear_drag": 0.06602806312819753,
+          "angular_drag": 0.009909507255847206,
+          "thrust_gains": [
+            1.035292747563724,
+            1.0370650239324462
+          ],
+          "wind_velocity": [
+            0.40289743491885155,
+            0.45845635858431744
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00025.npz",
+      "split": "validation",
+      "seed": 1642822536,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8945094473150519,
+          "inertia": 0.02809278860978012,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05845031119318314,
+          "linear_drag": 0.21269378453890142,
+          "angular_drag": 0.014925024855705906,
+          "thrust_gains": [
+            0.9879662104515347,
+            0.9662383160635115
+          ],
+          "wind_velocity": [
+            0.0615323913516862,
+            -0.2544597867550248
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00026.npz",
+      "split": "test",
+      "seed": 1233945442,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.127724775652735,
+          "inertia": 0.028529176209235993,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07312968560814742,
+          "linear_drag": 0.1414855044138726,
+          "angular_drag": 0.014827527273404313,
+          "thrust_gains": [
+            0.982687694127145,
+            1.0061381639772244
+          ],
+          "wind_velocity": [
+            -0.5222768003133814,
+            0.37421974317553286
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00027.npz",
+      "split": "train",
+      "seed": 1363047212,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9624436167205407,
+          "inertia": 0.028800854668669225,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.036740750081074365,
+          "linear_drag": 0.181586238172935,
+          "angular_drag": 0.018069649502733785,
+          "thrust_gains": [
+            1.0371350994718767,
+            0.953488856094361
+          ],
+          "wind_velocity": [
+            0.42637899009242164,
+            0.3689328282515557
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00028.npz",
+      "split": "validation",
+      "seed": 1214129970,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1375383871089813,
+          "inertia": 0.029444196359854343,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.0784210142199459,
+          "linear_drag": 0.1187728226465372,
+          "angular_drag": 0.017023996642321043,
+          "thrust_gains": [
+            0.9801069725197501,
+            1.0143447279986872
+          ],
+          "wind_velocity": [
+            0.5077849240316296,
+            -0.4343441996282704
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00029.npz",
+      "split": "train",
+      "seed": 1188802709,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0993626037993736,
+          "inertia": 0.026964606615523135,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.04439286096786507,
+          "linear_drag": 0.14410960975084888,
+          "angular_drag": 0.014029030189262874,
+          "thrust_gains": [
+            1.023208213128413,
+            0.968363264412663
+          ],
+          "wind_velocity": [
+            0.44897192775448536,
+            -0.020063298817085462
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00030.npz",
+      "split": "train",
+      "seed": 194489917,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9056335844749559,
+          "inertia": 0.027437855764865994,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.043836592315361335,
+          "linear_drag": 0.15638248523942228,
+          "angular_drag": 0.02419489298267298,
+          "thrust_gains": [
+            1.0261863256656845,
+            1.0202236117899206
+          ],
+          "wind_velocity": [
+            0.1893968480660917,
+            -0.13444044409737138
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00031.npz",
+      "split": "train",
+      "seed": 1200888232,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8918166907558307,
+          "inertia": 0.023037637851115844,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07123957417179971,
+          "linear_drag": 0.24252770748931274,
+          "angular_drag": 0.021503158348075174,
+          "thrust_gains": [
+            0.9909365692552291,
+            0.9836737296854031
+          ],
+          "wind_velocity": [
+            -0.35978204413755865,
+            0.13060101050403938
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00032.npz",
+      "split": "train",
+      "seed": 1707061844,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9224173279980203,
+          "inertia": 0.02792670820277268,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07397461064687787,
+          "linear_drag": 0.19614497779999202,
+          "angular_drag": 0.015881657418417905,
+          "thrust_gains": [
+            0.9892945672869038,
+            0.9661365568401784
+          ],
+          "wind_velocity": [
+            0.44865187968080245,
+            -0.10093020394292884
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00033.npz",
+      "split": "validation",
+      "seed": 652727864,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1094179720956832,
+          "inertia": 0.023606235101255747,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07917584501116495,
+          "linear_drag": 0.22069657863935221,
+          "angular_drag": 0.024588533419283676,
+          "thrust_gains": [
+            0.9538307890455333,
+            0.9502620313696236
+          ],
+          "wind_velocity": [
+            -0.49705088140638487,
+            0.4346455058194131
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00034.npz",
+      "split": "train",
+      "seed": 1294585270,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8928845670473228,
+          "inertia": 0.023879143201474995,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05675246048262012,
+          "linear_drag": 0.22814358021828257,
+          "angular_drag": 0.023531182930016815,
+          "thrust_gains": [
+            0.9733012181436538,
+            0.9676648362523583
+          ],
+          "wind_velocity": [
+            0.2611584687623192,
+            0.0950927158957483
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00035.npz",
+      "split": "train",
+      "seed": 66180795,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9136364687449632,
+          "inertia": 0.028992447441615932,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.030729303863930777,
+          "linear_drag": 0.15445117431845634,
+          "angular_drag": 0.02051047764695719,
+          "thrust_gains": [
+            0.9821779057510226,
+            1.0276253596965073
+          ],
+          "wind_velocity": [
+            0.3812946713459695,
+            -0.5902682815373433
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00036.npz",
+      "split": "train",
+      "seed": 746248853,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0581793048170085,
+          "inertia": 0.026537835135336987,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07949601902470556,
+          "linear_drag": 0.058754030386395595,
+          "angular_drag": 0.010695518394733622,
+          "thrust_gains": [
+            0.9806897144245511,
+            1.0250282140937315
+          ],
+          "wind_velocity": [
+            -0.16069661481242536,
+            -0.15797713151846227
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00037.npz",
+      "split": "test",
+      "seed": 937843451,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0921792477164203,
+          "inertia": 0.023899733392532853,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06190768729622979,
+          "linear_drag": 0.12570334797738464,
+          "angular_drag": 0.013447656325289508,
+          "thrust_gains": [
+            0.9930647786292854,
+            0.9670721920926593
+          ],
+          "wind_velocity": [
+            0.26084586307518276,
+            0.3002913241143257
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00038.npz",
+      "split": "train",
+      "seed": 2110414630,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.07732320143813,
+          "inertia": 0.02313338869052985,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03477213931526807,
+          "linear_drag": 0.23395042744942485,
+          "angular_drag": 0.02104102971479014,
+          "thrust_gains": [
+            1.0288353428456247,
+            0.9728424173286506
+          ],
+          "wind_velocity": [
+            0.5438875531404844,
+            -0.46795314952866074
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00039.npz",
+      "split": "train",
+      "seed": 460817075,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9712190684010165,
+          "inertia": 0.02859505826818133,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.027723552796095938,
+          "linear_drag": 0.09772848129548167,
+          "angular_drag": 0.01991385111217086,
+          "thrust_gains": [
+            1.022196835212288,
+            1.021925119403857
+          ],
+          "wind_velocity": [
+            0.03404813401190343,
+            0.47420007274560316
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00040.npz",
+      "split": "validation",
+      "seed": 593883018,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.869776345371425,
+          "inertia": 0.022352043841236714,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06871645354392283,
+          "linear_drag": 0.12245573075229539,
+          "angular_drag": 0.011654420493032157,
+          "thrust_gains": [
+            0.9789395255701322,
+            1.0096646794604016
+          ],
+          "wind_velocity": [
+            -0.09946223907107332,
+            -0.09810320220197333
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00041.npz",
+      "split": "train",
+      "seed": 877308581,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.118851647556448,
+          "inertia": 0.02286426636394673,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05703231231621399,
+          "linear_drag": 0.2456981436718742,
+          "angular_drag": 0.014087247245624861,
+          "thrust_gains": [
+            1.0029332673923546,
+            0.9503663399418919
+          ],
+          "wind_velocity": [
+            -0.17640981296028474,
+            0.2983453921030248
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00042.npz",
+      "split": "test",
+      "seed": 2131733183,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.957393083923062,
+          "inertia": 0.02905219830877931,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06419619095944476,
+          "linear_drag": 0.09979863430438381,
+          "angular_drag": 0.010289856715374112,
+          "thrust_gains": [
+            1.042852599927649,
+            1.0094862032390175
+          ],
+          "wind_velocity": [
+            -0.2897776480486605,
+            0.48623377775986987
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00043.npz",
+      "split": "train",
+      "seed": 1832669143,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.95948521632575,
+          "inertia": 0.029790143617629685,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05055762968178905,
+          "linear_drag": 0.23145325503635522,
+          "angular_drag": 0.016928774578225843,
+          "thrust_gains": [
+            1.044839210211639,
+            0.9548909428206818
+          ],
+          "wind_velocity": [
+            -0.4634624505204945,
+            0.5023773465488642
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00044.npz",
+      "split": "train",
+      "seed": 74502574,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1002478930958772,
+          "inertia": 0.025463055051943736,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.028123594846642862,
+          "linear_drag": 0.11670428496419732,
+          "angular_drag": 0.008134816474690281,
+          "thrust_gains": [
+            1.0108965600914555,
+            1.0410162304099129
+          ],
+          "wind_velocity": [
+            0.437681413053551,
+            -0.40800258464172856
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00045.npz",
+      "split": "train",
+      "seed": 502381220,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1276282926234975,
+          "inertia": 0.02225493087096793,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.0593857438467922,
+          "linear_drag": 0.24807925095227923,
+          "angular_drag": 0.02175596569085851,
+          "thrust_gains": [
+            1.0113693641969734,
+            0.9613604649550582
+          ],
+          "wind_velocity": [
+            0.12227880774242039,
+            0.02213687596313374
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00046.npz",
+      "split": "train",
+      "seed": 1764532444,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.026779742281469,
+          "inertia": 0.029273330271785913,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.053137541095489016,
+          "linear_drag": 0.10428883193280847,
+          "angular_drag": 0.024697798665274467,
+          "thrust_gains": [
+            1.0459228496350692,
+            0.9684361530673699
+          ],
+          "wind_velocity": [
+            -0.011180009746548647,
+            -0.16181042981061983
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00047.npz",
+      "split": "train",
+      "seed": 125204183,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8737429503947302,
+          "inertia": 0.022201035612624057,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.025935822856590393,
+          "linear_drag": 0.2023313253123954,
+          "angular_drag": 0.01727887431744287,
+          "thrust_gains": [
+            1.0134321823137689,
+            1.021548565518422
+          ],
+          "wind_velocity": [
+            -0.14886331685865334,
+            0.5141106125185778
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00048.npz",
+      "split": "train",
+      "seed": 1837539164,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8557783077974849,
+          "inertia": 0.02885645921982577,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06958768010012581,
+          "linear_drag": 0.1695843413501099,
+          "angular_drag": 0.01267895883633713,
+          "thrust_gains": [
+            1.0474801410585048,
+            1.005670305642624
+          ],
+          "wind_velocity": [
+            0.16932651536019439,
+            0.22796324921893385
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00049.npz",
+      "split": "train",
+      "seed": 604267306,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9073797097728589,
+          "inertia": 0.02013319700463465,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07502636536999456,
+          "linear_drag": 0.14522390340995672,
+          "angular_drag": 0.018830852283584193,
+          "thrust_gains": [
+            0.9835210991669392,
+            0.9708029096426168
+          ],
+          "wind_velocity": [
+            -0.1306125189083906,
+            0.44056575153820854
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00050.npz",
+      "split": "test",
+      "seed": 1970642945,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0079527244072257,
+          "inertia": 0.02903315240818935,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.02539772354503241,
+          "linear_drag": 0.22089488482693875,
+          "angular_drag": 0.00869595053220177,
+          "thrust_gains": [
+            1.006357861862871,
+            0.9531227638667574
+          ],
+          "wind_velocity": [
+            -0.2988455959580617,
+            -0.18450205091783572
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00051.npz",
+      "split": "validation",
+      "seed": 630487793,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.999127284142118,
+          "inertia": 0.020191586024521785,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.039760567910213485,
+          "linear_drag": 0.07790424070468963,
+          "angular_drag": 0.016203025973721495,
+          "thrust_gains": [
+            0.9966230160354991,
+            1.005015683476114
+          ],
+          "wind_velocity": [
+            -0.05259800154661398,
+            0.22404650142230598
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00052.npz",
+      "split": "train",
+      "seed": 932688237,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8557107444869453,
+          "inertia": 0.027730691792800743,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05710364438826878,
+          "linear_drag": 0.1386035728516875,
+          "angular_drag": 0.008044985701244367,
+          "thrust_gains": [
+            0.9642559964671602,
+            1.049685605402612
+          ],
+          "wind_velocity": [
+            0.44519614286299614,
+            -0.22735793935194726
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00053.npz",
+      "split": "train",
+      "seed": 1421454890,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8710148599641399,
+          "inertia": 0.029265554304636728,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05461828019771217,
+          "linear_drag": 0.1782706268544763,
+          "angular_drag": 0.012578859032257046,
+          "thrust_gains": [
+            0.9593440362567572,
+            1.0451386321065794
+          ],
+          "wind_velocity": [
+            -0.18488218472242152,
+            0.25112923222799266
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00054.npz",
+      "split": "train",
+      "seed": 271185813,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8980929801552096,
+          "inertia": 0.023443716175876383,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.0383702185693272,
+          "linear_drag": 0.2345730110978304,
+          "angular_drag": 0.017033894757572908,
+          "thrust_gains": [
+            1.01976752924439,
+            0.9670114631337213
+          ],
+          "wind_velocity": [
+            -0.4929547474622893,
+            0.4089226746353708
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00055.npz",
+      "split": "train",
+      "seed": 1196217437,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8817817836968166,
+          "inertia": 0.027332245103256877,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05589407534466731,
+          "linear_drag": 0.18921274095647445,
+          "angular_drag": 0.01755340080221883,
+          "thrust_gains": [
+            1.0055078454485298,
+            1.0230454314709378
+          ],
+          "wind_velocity": [
+            0.5805150747400262,
+            -0.32286978732043
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00056.npz",
+      "split": "train",
+      "seed": 1084512517,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1378941224602588,
+          "inertia": 0.020902003929091514,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06361015524237204,
+          "linear_drag": 0.24816341255811214,
+          "angular_drag": 0.018696177859073543,
+          "thrust_gains": [
+            1.0475677416508353,
+            1.0254785732805818
+          ],
+          "wind_velocity": [
+            0.23345536287061397,
+            0.25878745984366003
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00057.npz",
+      "split": "test",
+      "seed": 1683408584,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1025511133486887,
+          "inertia": 0.025157972265718212,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03941351196065846,
+          "linear_drag": 0.20723943625200375,
+          "angular_drag": 0.009014831131288512,
+          "thrust_gains": [
+            1.001381467403275,
+            1.0009146032711282
+          ],
+          "wind_velocity": [
+            0.21526464189111494,
+            -0.41812426442613304
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00058.npz",
+      "split": "train",
+      "seed": 2139123293,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1467195074686065,
+          "inertia": 0.023389116300160953,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.0283057229451092,
+          "linear_drag": 0.12299999542884266,
+          "angular_drag": 0.018249739042863564,
+          "thrust_gains": [
+            0.9501221838171188,
+            1.0246263320684008
+          ],
+          "wind_velocity": [
+            0.16159881655008734,
+            -0.2341421127005095
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00059.npz",
+      "split": "train",
+      "seed": 1426602463,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.128473853623301,
+          "inertia": 0.02269398413247504,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.0678378491389404,
+          "linear_drag": 0.0646078851549625,
+          "angular_drag": 0.02239610323090945,
+          "thrust_gains": [
+            0.9611505080612835,
+            1.0045645440134499
+          ],
+          "wind_velocity": [
+            0.39739617099635205,
+            0.5042968041771164
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00060.npz",
+      "split": "validation",
+      "seed": 878721193,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8870369590952922,
+          "inertia": 0.020486679339877457,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05342394108136567,
+          "linear_drag": 0.19459698662989816,
+          "angular_drag": 0.012079940274496114,
+          "thrust_gains": [
+            1.0106856844563576,
+            0.9806386600983594
+          ],
+          "wind_velocity": [
+            -0.06697386416617279,
+            -0.20246502394800675
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00061.npz",
+      "split": "validation",
+      "seed": 872709139,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1342251432999637,
+          "inertia": 0.027634097338233396,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06887239932440153,
+          "linear_drag": 0.19996206120261217,
+          "angular_drag": 0.01703665941569147,
+          "thrust_gains": [
+            1.0118270703524865,
+            1.0097720905491305
+          ],
+          "wind_velocity": [
+            0.19585414270629542,
+            -0.34256365154100915
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00062.npz",
+      "split": "train",
+      "seed": 897559571,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9961830238834917,
+          "inertia": 0.020538354327176243,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.049235101186499486,
+          "linear_drag": 0.09615849911939023,
+          "angular_drag": 0.012435168778491164,
+          "thrust_gains": [
+            1.0337478504004831,
+            0.9737085717719908
+          ],
+          "wind_velocity": [
+            -0.3106651185407221,
+            -0.2781872446894839
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00063.npz",
+      "split": "train",
+      "seed": 1748095464,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0431600012063427,
+          "inertia": 0.026952588653921295,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07987258533052172,
+          "linear_drag": 0.17619936385726148,
+          "angular_drag": 0.021874254767675287,
+          "thrust_gains": [
+            1.0375656992273992,
+            0.9674838671994448
+          ],
+          "wind_velocity": [
+            -0.421737089915245,
+            0.14265662538009094
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00064.npz",
+      "split": "train",
+      "seed": 689805532,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0713413060492023,
+          "inertia": 0.024214398712444227,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.04446433938086691,
+          "linear_drag": 0.16663661596540305,
+          "angular_drag": 0.022689513881369396,
+          "thrust_gains": [
+            1.0400963960416143,
+            1.0034687672436364
+          ],
+          "wind_velocity": [
+            -0.1327707796469254,
+            -0.47764833700949105
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00065.npz",
+      "split": "train",
+      "seed": 358571614,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.023169386672873,
+          "inertia": 0.025870191145831868,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.04852543749119981,
+          "linear_drag": 0.06729728043238628,
+          "angular_drag": 0.014197346566309364,
+          "thrust_gains": [
+            1.0262072371606457,
+            1.018892225942902
+          ],
+          "wind_velocity": [
+            -0.31922492620186765,
+            0.17764663696316096
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00066.npz",
+      "split": "train",
+      "seed": 717885406,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.12493901586769,
+          "inertia": 0.023084296804571715,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05706334225898422,
+          "linear_drag": 0.2159008111934302,
+          "angular_drag": 0.023465540145296393,
+          "thrust_gains": [
+            0.9765577524634751,
+            1.0156703299656769
+          ],
+          "wind_velocity": [
+            0.5038430644917412,
+            -0.2679810521448633
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00067.npz",
+      "split": "train",
+      "seed": 48773805,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1470147354066662,
+          "inertia": 0.020351423456802624,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03513523634413303,
+          "linear_drag": 0.09381995053960238,
+          "angular_drag": 0.010392822417257998,
+          "thrust_gains": [
+            1.0100511422680194,
+            0.9510610752250754
+          ],
+          "wind_velocity": [
+            -0.28649823765920523,
+            0.3897378559911482
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00068.npz",
+      "split": "train",
+      "seed": 227939460,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0373707259144664,
+          "inertia": 0.02004916646954368,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07066759362192543,
+          "linear_drag": 0.1525088346921302,
+          "angular_drag": 0.024136928293456702,
+          "thrust_gains": [
+            1.0235872469008631,
+            1.0105561160977943
+          ],
+          "wind_velocity": [
+            0.5834319163633342,
+            -0.20952761636935902
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00069.npz",
+      "split": "train",
+      "seed": 193376308,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9819678569991636,
+          "inertia": 0.022713495368165644,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05665124461825991,
+          "linear_drag": 0.1201938693640624,
+          "angular_drag": 0.018848459539637846,
+          "thrust_gains": [
+            0.9886554175454628,
+            0.9839095489708138
+          ],
+          "wind_velocity": [
+            -0.35062514813942824,
+            -0.3455668160702685
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00070.npz",
+      "split": "train",
+      "seed": 1656896191,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.005079867312721,
+          "inertia": 0.028268590843645382,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03596479992772957,
+          "linear_drag": 0.0605620191417579,
+          "angular_drag": 0.01946356000103005,
+          "thrust_gains": [
+            1.012957062935311,
+            0.9687382402092615
+          ],
+          "wind_velocity": [
+            -0.11074303807135427,
+            -0.468324012955735
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00071.npz",
+      "split": "train",
+      "seed": 1551254892,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9639498174395698,
+          "inertia": 0.02592228330045033,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.0796009974989938,
+          "linear_drag": 0.22624499022857458,
+          "angular_drag": 0.008020174757662472,
+          "thrust_gains": [
+            1.0250246239838212,
+            1.0316376329303252
+          ],
+          "wind_velocity": [
+            -0.4905084463328492,
+            -0.024387316854948327
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00072.npz",
+      "split": "train",
+      "seed": 1496303881,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0324280570020965,
+          "inertia": 0.025930345360442253,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03378708006811,
+          "linear_drag": 0.13109691179001184,
+          "angular_drag": 0.01844920779378121,
+          "thrust_gains": [
+            0.9827457004810196,
+            1.0143970441760557
+          ],
+          "wind_velocity": [
+            0.5579409852410434,
+            -0.02519511724648793
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00073.npz",
+      "split": "train",
+      "seed": 991873798,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9506459842297281,
+          "inertia": 0.029385066098748493,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03375293541586233,
+          "linear_drag": 0.1335923970261198,
+          "angular_drag": 0.017994642390056555,
+          "thrust_gains": [
+            1.0073706252585817,
+            0.9948524057987398
+          ],
+          "wind_velocity": [
+            -0.3017984116772422,
+            0.5448045961498983
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00074.npz",
+      "split": "train",
+      "seed": 1539871429,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.037551282841048,
+          "inertia": 0.023975009718720124,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.03871773920324277,
+          "linear_drag": 0.22616884100474705,
+          "angular_drag": 0.021057932615525007,
+          "thrust_gains": [
+            0.9872267357233592,
+            0.9867725250308506
+          ],
+          "wind_velocity": [
+            -0.04240881348482861,
+            0.5824905157465606
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00075.npz",
+      "split": "train",
+      "seed": 346328507,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.8747872066019143,
+          "inertia": 0.026259570112206584,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.060715140205659796,
+          "linear_drag": 0.1529036811090002,
+          "angular_drag": 0.02366124186443232,
+          "thrust_gains": [
+            1.000652968794844,
+            0.9760112520177209
+          ],
+          "wind_velocity": [
+            -0.2620599597644003,
+            0.17297529270310852
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00076.npz",
+      "split": "train",
+      "seed": 1934070332,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.0101373710457102,
+          "inertia": 0.021004691290193125,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.05801725532397394,
+          "linear_drag": 0.09813902707932634,
+          "angular_drag": 0.01735120420879744,
+          "thrust_gains": [
+            1.02283371030509,
+            1.022707297481386
+          ],
+          "wind_velocity": [
+            -0.17669059947493693,
+            -0.06081891418820373
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00077.npz",
+      "split": "train",
+      "seed": 1075985460,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.036470277644032,
+          "inertia": 0.024349476495598744,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07751525665466844,
+          "linear_drag": 0.24489060917330768,
+          "angular_drag": 0.018087058245457213,
+          "thrust_gains": [
+            1.0414583293800217,
+            0.9559362547040622
+          ],
+          "wind_velocity": [
+            -0.45277850001055475,
+            0.32848452986930965
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00078.npz",
+      "split": "train",
+      "seed": 2014450023,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 0.9492808078075559,
+          "inertia": 0.027827395293082674,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.07995762151170267,
+          "linear_drag": 0.20676774038894596,
+          "angular_drag": 0.01357472305722121,
+          "thrust_gains": [
+            1.016937606519412,
+            0.9587614060089326
+          ],
+          "wind_velocity": [
+            -0.0180889281746357,
+            0.23702997664528802
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    },
+    {
+      "file": "episode_00079.npz",
+      "split": "train",
+      "seed": 327087749,
+      "steps": 240,
+      "terminal": false,
+      "reason": "collection_limit",
+      "config": {
+        "drone": {
+          "mass": 1.1029294331574846,
+          "inertia": 0.02907428640529976,
+          "arm": 0.22,
+          "max_motor_force": 9.0,
+          "motor_tau": 0.06082491740208618,
+          "linear_drag": 0.24268152610569466,
+          "angular_drag": 0.0197527464939913,
+          "thrust_gains": [
+            1.0492842631881067,
+            0.9938850722075092
+          ],
+          "wind_velocity": [
+            -0.31274439026478296,
+            0.39995830963076573
+          ]
+        },
+        "world": {
+          "gravity": 9.81,
+          "physics_dt": 0.005,
+          "control_dt": 0.05,
+          "width": 20.0,
+          "height": 12.0,
+          "collision_radius": 0.25,
+          "max_seconds": 30.0
+        }
+      }
+    }
+  ],
+  "status": "complete"
+}

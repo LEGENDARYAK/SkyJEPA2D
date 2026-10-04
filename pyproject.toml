@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skyjepa-2d"
+version = "0.1.0"
+description = "Planar drone physics, isolated flight modes, and a compact JEPA research pipeline"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "pygame>=2.6,<3"]
+
+[project.optional-dependencies]
+train = ["torch>=2.4,<3"]
+preview = ["Pillow>=10"]
+dev = ["pytest>=8", "ruff>=0.11"]
+
+[project.scripts]
+skyjepa2d = "skyjepa2d.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+

@@ -1,0 +1,11 @@
+{
+  "physical_loss": 0.2490089067886042,
+  "position_rmse_m": 0.336993926135153,
+  "velocity_rmse_m_s": 1.281570196035985,
+  "pitch_rmse_deg": 24.226909223591417,
+  "physics_only_loss": 0.21533475400403487,
+  "time_shuffled_actions_loss": 0.460738712965056,
+  "residual_acc_rms_m_s2": 0.47894080146782547,
+  "latent_std": 0.47238366201866505,
+  "windows": 344
+}

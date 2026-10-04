@@ -1,0 +1,46 @@
+{
+  "checkpoint_version": 1,
+  "config": {
+    "drone": {
+      "mass": 1.0,
+      "inertia": 0.025,
+      "arm": 0.22,
+      "max_motor_force": 9.0,
+      "motor_tau": 0.045,
+      "linear_drag": 0.12,
+      "angular_drag": 0.015,
+      "thrust_gains": [
+        1.0,
+        1.0
+      ],
+      "wind_velocity": [
+        0.0,
+        0.0
+      ]
+    },
+    "world": {
+      "gravity": 9.81,
+      "physics_dt": 0.005,
+      "control_dt": 0.05,
+      "width": 20.0,
+      "height": 12.0,
+      "collision_radius": 0.25,
+      "max_seconds": 30.0
+    }
+  },
+  "history": 10,
+  "horizon": 20,
+  "latent_dim": 24,
+  "control_dt": 0.05,
+  "seed": 7,
+  "training": {
+    "latent_epochs": 25,
+    "prober_epochs": 20,
+    "batch_size": 64,
+    "batches_per_epoch": 40,
+    "learning_rate": 0.001,
+    "sig_weight": 0.02
+  },
+  "torch_version": "2.14.1+cpu",
+  "device": "cpu"
+}
